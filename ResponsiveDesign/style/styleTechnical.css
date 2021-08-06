@@ -1,0 +1,114 @@
+/*This is used to reset the initial settings the browsers have*/
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  --font-p: #6c6d74;
+  --background: #fff;
+
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background: var(--background);
+  color: var(--font-p);
+}
+
+body,
+button,
+input,
+textarea {
+  font-size: clamp(14px, 1.6rem, 2vw);
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 30% 70%;
+
+  grid-template-areas: "Nav-bar Documentation";
+}
+
+h1,
+h2 {
+  color: black;
+  margin: 1rem;
+  /*text-align: center;*/
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+nav.nav-bar {
+  position: fixed;
+  min-width: 25rem;
+  width: 27rem;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  grid-area: Nav-bar;
+  border-right: 0.2rem solid var(--font-p);
+  padding: 0;
+}
+
+nav.nav-bar ul .nav-link {
+  color: var(--font-p);
+}
+
+nav.nav-bar ul .nav-link li {
+  border-top: 0.18rem solid rgba(0, 22, 22, 0.4);
+  padding: 1rem;
+}
+
+main.main-doc {
+  grid-area: Documentation;
+  width: 95%;
+}
+
+main.main-doc .main-section p {
+  padding: 1rem 0 1rem 3rem;
+  text-align: justify;
+}
+
+main.main-doc .main-section li {
+  padding: 1rem 0 1rem 6rem;
+  text-align: justify;
+  list-style-position: inside;
+}
+
+main.main-doc .main-section code {
+  display: block;
+  margin: 2rem 0 2rem 4.5rem;
+  padding: 2rem;
+  text-align: left;
+  background-color: #f7f7f7;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 870px) {
+  #navbar {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+  main.main-doc {
+    position: absolute;
+    top: 70rem;
+    width: 94vw;
+  }
+}

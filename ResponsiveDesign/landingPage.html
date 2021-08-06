@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--The meta tag below makes sures that the rendering and touch zooming is correct and responsive for every type of device-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Landing Page for FreeCodeCamp</title>
+    <link href="./style/styleLanding.css" rel="stylesheet" type="text/css" />
+    <!-- Latest compiled and minified CSS. Instead of downloading and hosting bootstrap, we decided to include it from a CDN (Content Delivery Network)-->
+    <link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<body class="fullpage">
+
+    <header class="header" id="header">
+        <div class="logo">
+            <img src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="original trombones logo" alt="logo" id="header-img" class="">
+        </div>
+        <nav id="nav-bar" class="nav-bar">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-dark" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#howItWorks">How It Works</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Handcrafted, home-made masterpieces</h1>
+            <form id="form" action="">
+                <input type="email" id="email" name="email" placeholder="Enter your e-mail address" required>
+                <input id="submit" class="btn" type="submit" value="GET STARTED"></input>
+            </form>
+        </section>
+        <div class="container">
+            <section id="features">
+                <div class="grid">
+                    <img src="imgs/img1.jpg" alt="fire">
+                    <h2>Premium Materials</h2>
+                    <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity
+                        of
+                        your purchase</p>
+                </div>
+
+                <div class="grid">
+                    <img src="imgs/img2.jpg" alt="truck">
+                    <h2>Fast Shipping</h2>
+                    <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide
+                        free
+                        returns if you are not satisfied.</p>
+                </div>
+
+                <div class="grid">
+                    <img src="imgs/img3.jpg" alt="battery">
+                    <h2>Quality Assurance</h2>
+                    <p>For every purchase you make, we will ensure there are no damages or faults and we will check and
+                        test
+                        the pitch of your instrument.</p>
+                </div>
+            </section>
+            <section class="howItWorks" id="howItWorks">
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/y8Yv4pnO7qc"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </section>
+    </main>
+    <section id="pricing" class="pricing">
+        <!--The class card is a container that in this case can include the image, place on the top (card-img-top), and the card-body that includes the title and the text. Following the card we two buttons-->
+
+        <div class="card-body">
+            <h3>TENOR TROMBONE</h3>
+            <p class="first-p">$600</p>
+            <p>Lorem ipsum.</p>
+            <p>Lorem ipsum.</p>
+            <p>Lorem ipsum dolor.</p>
+            <p>Lorem ipsum.</p>
+            <a href="#" class="btn btn-primary">SELECT</a>
+        </div>
+
+
+        <div class="card-body">
+            <h3>BASS TROMBONE</h3>
+            <p class="first-p">$900</p>
+            <p>Lorem ipsum.</p>
+            <p>Lorem ipsum.</p>
+            <p>Lorem ipsum dolor.</p>
+            <p>Lorem ipsum.</p>
+            <a href="#" class="btn btn-primary">SELECT</a>
+        </div>
+
+
+        <div class="card-body">
+            <h3>VALVE TROMBONE</h3>
+            <p class="first-p">$1200</p>
+            <p>Plays similar to a trumpet</p>
+            <p>Great for Jazz bands</p>
+            <p>Lorem ipsum dolor</p>
+            <p>Lorem ipsum</p>
+            <a href="#" class="btn btn-primary">SELECT</a>
+        </div>
+
+    </section>
+    <!-- <section id="pricing" class="pricing">
+        
+        <div class="col-12 col-md-4 card">
+            <div class="card-body">
+                <h3 class="card-title">TENOR TROMBONE</h3>
+                <p class="card-text">$600</p>
+                <p class="card-text">Lorem ipsum.</p>
+                <p class="card-text">Lorem ipsum.</p>
+                <p class="card-text">Lorem ipsum dolor.</p>
+                <p class="card-text">Lorem ipsum.</p>
+                <a href="#" class="btn btn-primary">SELECT</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 card">
+            <div class="card-body">
+                <h3 class="card-title">BASS TROMBONE</h3>
+                <p class="card-text">$900</p>
+                <p class="card-text">Lorem ipsum.</p>
+                <p class="card-text">Lorem ipsum.</p>
+                <p class="card-text">Lorem ipsum dolor.</p>
+                <p class="card-text">Lorem ipsum.</p>
+                <a href="#" class="btn btn-primary">SELECT</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 card">
+            <div class="card-body">
+                <h3 class="card-title">VALVE TROMBONE</h3>
+                <p class="card-text">$1200</p>
+                <p class="card-text">Plays similar to a trumpet</p>
+                <p class="card-text">Great for Jazz bands</p>
+                <p class="card-text">Lorem ipsum dolor</p>
+                <p class="card-text">Lorem ipsum</p>
+                <a href="#" class="btn btn-primary">SELECT</a>
+            </div>
+        </div>
+    </section> -->
+    <footer class="nav-footer">
+        <nav >
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Terms</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <span>Copyright 2016, Original Trombones</span>
+    </footer>
+    </div>
+
+</body>
+
+</html>

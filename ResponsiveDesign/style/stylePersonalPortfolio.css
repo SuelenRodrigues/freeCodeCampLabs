@@ -1,0 +1,259 @@
+/*This is used to reset the initial settings the browsers have*/
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* A few media query to set some font sizes at different screen sizes.
+ * This helps automate a bit of responsiveness.
+ * The trick is to use the rem unit for size values, margin and padding.
+ * Because rem is relative to the document font size
+ * when we scale up or down the font size on the document
+ * it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+ * The calculation is the following
+ * screen size divided by browser base font size
+ * As an example: a breakpoint at 980px
+ * 980px / 16px = 61.25em
+ https://codepen.io/freeCodeCamp/pen/zNBOYG
+ https://codepen.io/FreeCodeCamp/
+*/
+
+/*  1200px / 16px = 75em*/
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/*  980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/*  460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+body {
+  height: 100vh;
+  background: var(--main-gray);
+  color: var(--main-white);
+}
+
+body,
+button,
+input,
+textarea {
+  font-size: clamp(14px, 1.6rem, 2vw);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--main-white);
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.content .navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--main-red);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
+  z-index: 10;
+}
+
+.content .navbar ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.content .navbar ul a:hover {
+  background: var(--main-blue);
+  transition: background 0.4s ease-out;
+}
+
+.content .navbar ul li {
+  padding: 1.5rem 2rem;
+}
+
+@media (max-width: 28.75em) {
+  .content .navbar {
+    justify-content: center;
+  }
+  .content .navbar ul {
+    margin: 0 1rem;
+  }
+}
+
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-section h1 {
+  font-size: 5rem;
+}
+
+#welcome-section p {
+  font-size: 2.3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-red);
+  text-align: center;
+}
+
+section.projects {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background: var(--main-blue);
+}
+
+section.projects h1 {
+  max-width: 53rem;
+  font-size: 3.4rem;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+}
+
+/*section.projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 128rem;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}*/
+
+section.projects .project-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+section.projects .project-grid a {
+  background-color: var(--main-gray);
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+  border-radius: 2px;
+  max-width: 36.2rem;
+  transition: background 0.2s ease-out;
+}
+
+section.projects .project-grid a:hover {
+  background: var(--main-red);
+}
+
+section.projects img {
+  width: 36rem;
+  height: 22rem;
+}
+
+section.projects .button {
+  background: var(--main-gray);
+  padding: 1rem;
+  display: flex;
+  margin: auto;
+  width: 10rem;
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+  transition: background 0.2s ease-out;
+}
+
+section.projects .button:hover {
+  background: var(--main-red);
+  transform: translateX(10px);
+}
+
+section.contact {
+  height: 75rem;
+  border-bottom: 0.3rem solid var(--main-red);
+  text-align: center;
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+section.contact h2 {
+  font-size: 4.5rem;
+}
+
+section.contact p {
+  font-size: 1.7rem;
+  font-style: italic;
+}
+
+section.contact .div-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+section.contact .div-flex a {
+  margin: -0.6rem;
+  padding: 0 0.5rem 0 3.5rem;
+  transition: transform 0.3s ease-out;
+}
+
+section.contact .div-flex a:hover {
+  transform: translateY(-8px);
+}
+
+footer {
+  width: 80vw;
+  height: 9rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+}
+
+footer p {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}

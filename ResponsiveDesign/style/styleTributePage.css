@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  --main-font: #333;
+  --main-background: #eee;
+  --main-2background: rgb(212, 211, 211);
+
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--main-background);
+  text-align: center;
+}
+
+body #main {
+  background-color: var(--main-2background);
+  margin: 2rem 1rem;
+}
+
+#title,
+#img-caption {
+  text-align: center;
+}
+
+#main #title,
+#main h5 {
+  padding-top: 1rem;
+}
+
+#main h5 {
+  padding-bottom: 1rem;
+  font-weight: 400;
+}
+
+#img-div {
+  /*width: 92vw;
+  padding: 1rem;
+  margin: 1.3rem;*/
+  background: var(--main-background);
+  padding: 1rem;
+  margin: 0;
+}
+
+#img-caption {
+  padding: 1rem;
+}
+#image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#tribute-info h3 {
+  margin: 2rem 0;
+}
+
+#tribute-info ul {
+  max-width: 40rem;
+  margin: 0 auto 5rem auto;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+#tribute-info ul li {
+  padding: 0.5rem;
+}
+
+p#quote {
+  max-width: 40rem;
+  /*margin: 0 auto 5rem auto;*/
+  margin: 0 auto 0.5rem auto;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+p#quote,
+p#quote1 {
+  font-style: italic;
+}
+
+p#last {
+  font-weight: 800;
+  margin: 1rem;
+  padding: 1rem;
+}
+@media (min-width: 800px) {
+  html {
+    font-size: 100%;
+  }
+}
